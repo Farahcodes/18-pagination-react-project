@@ -23,6 +23,13 @@ function App() {
             return <Follower key={follower.id} {...follower}/>
           })}
         </div>
+          {!loading &&  <div className="btn-container">
+            {data.map((item,index)=>{
+              return(
+                <button key={index} className='page-btn'>{index + 1}</button>
+              )
+            })}
+          </div> }
       </section>
     </main>
   )
